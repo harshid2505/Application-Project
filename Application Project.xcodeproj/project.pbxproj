@@ -72,7 +72,7 @@
 		65676FF029E7CCDB007AD912 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65676FF229E7CCDB007AD912 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		656D46E429E83ED2009D0326 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
-		656D7AFC29ED0F2000401747 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		656D7AFC29ED0F2000401747 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyTableViewCell.swift; path = ../MyTableViewCell.swift; sourceTree = "<group>"; };
 		656EEB102A14F9A0001E0F2D /* sharePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sharePage.swift; sourceTree = "<group>"; };
 		65766BF329F900C40052C29D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		6577429B29F2A85700287BDD /* ViewController10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController10.swift; sourceTree = "<group>"; };
@@ -106,6 +106,22 @@
 		65676FD829E7CCDA007AD912 = {
 			isa = PBXGroup;
 			children = (
+				65676FE329E7CCDA007AD912 /* Application Project */,
+				65676FE229E7CCDA007AD912 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		65676FE229E7CCDA007AD912 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				65676FE129E7CCDA007AD912 /* Application Project.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		65676FE329E7CCDA007AD912 /* Application Project */ = {
+			isa = PBXGroup;
+			children = (
 				659223DD2A1DCB7C00E9CC0A /* chatePage.swift */,
 				658A2A872A1C89080099A7A4 /* shareTableViewCell2.swift */,
 				658A2A852A1C7B490099A7A4 /* shareTableViewCell.swift */,
@@ -134,22 +150,6 @@
 				65B020B929E91EEC00479D6B /* ViewController4.swift */,
 				65B020B729E918C700479D6B /* ViewController3.swift */,
 				656D46E429E83ED2009D0326 /* ViewController2.swift */,
-				65676FE329E7CCDA007AD912 /* Application Project */,
-				65676FE229E7CCDA007AD912 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		65676FE229E7CCDA007AD912 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				65676FE129E7CCDA007AD912 /* Application Project.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		65676FE329E7CCDA007AD912 /* Application Project */ = {
-			isa = PBXGroup;
-			children = (
 				65676FE429E7CCDA007AD912 /* AppDelegate.swift */,
 				65676FE629E7CCDA007AD912 /* SceneDelegate.swift */,
 				65676FE829E7CCDA007AD912 /* ViewController.swift */,
