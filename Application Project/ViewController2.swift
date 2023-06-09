@@ -15,6 +15,7 @@ class ViewController2: UIViewController {
 
         // Do any additional setup after loading the view.
         imgView.layer.cornerRadius = imgView.frame.size.width/2
+//        imgView.layer.backgroundColor = UIColor.black.cgColor
     }
     func navigation(){
         let navigate = storyboard?.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController

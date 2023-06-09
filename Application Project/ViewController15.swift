@@ -7,9 +7,12 @@
 
 import UIKit
 
-class ViewController15: UIViewController {
+class ViewController15: UIViewController,UITextFieldDelegate{
 
     @IBOutlet weak var passwordTextField: UITextField!
+    
+    @IBOutlet weak var nextButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -50,12 +53,22 @@ class ViewController15: UIViewController {
         showAlert2()
     }
     
-    @IBAction func nextButtonAction(_ sender: UIButton) {
+    func textField(_ textField: UITextField, willDismissEditMenuWith animator: UIEditMenuInteractionAnimating) {
         if passwordTextField.text?.count ?? 0 != 6{
-            showAlert()
+            self.nextButton.isEnabled = true
         }
         else{
-            navigation()
+            self.nextButton.isEnabled = false
         }
+    }
+    
+    @IBAction func nextButtonAction(_ sender: UIButton) {
+//        if passwordTextField.text?.count ?? 0 != 6{
+//            showAlert()
+//        }
+//        else{
+//            navigation()
+//        }
+        navigation()
     }
 }

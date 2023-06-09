@@ -58,7 +58,7 @@ class myTableViewCell2: UITableViewCell{
     }
     
     @IBAction func shareButtonAction(_ sender: UIButton) {
-//       let navigate = 
+        let nv =  UINavigationController().storyboard
     }
     
     @IBAction func saveButtonAction(_ sender: UIButton) {
@@ -82,7 +82,5 @@ class myTableViewCell2: UITableViewCell{
             a = 0
         }
     }
-    
-    
     
 }

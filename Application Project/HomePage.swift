@@ -88,4 +88,8 @@ class HomePage: UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBAction func chateButtonAction(_ sender: UIButton) {
         navigation()
     }
+    
+    @IBAction func likePageButton(_ sender: UIButton) {
+    }
+    
 }
