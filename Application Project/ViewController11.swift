@@ -51,6 +51,7 @@ class ViewController11: UIViewController {
             showAlert()
         }
         else{
+            SqLite.addData(userName: nameTextField.text!, password: "", number: 0, email: "")
             navigation()
         }
     }

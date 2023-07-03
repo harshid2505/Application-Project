@@ -23,6 +23,8 @@ class myTableViewCell2: UITableViewCell{
     
     var a = 1
     var b = 1
+    
+    var object: ((IndexPath) -> ())?
 //    var image = [UIImage(named: "harshid"),UIImage(named: "harshid"),UIImage(named: "harshid"),UIImage(named: "harshid"),UIImage(named: "harshid"),UIImage(named: "harshid"),UIImage(named: "harshid"),UIImage(named: "harshid"),UIImage(named: "harshid"),UIImage(named: "harshid"),UIImage(named: "harshid")]
     
     
@@ -58,7 +60,7 @@ class myTableViewCell2: UITableViewCell{
     }
     
     @IBAction func shareButtonAction(_ sender: UIButton) {
-        let nv =  UINavigationController().storyboard
+        object!(IndexPath())
     }
     
     @IBAction func saveButtonAction(_ sender: UIButton) {

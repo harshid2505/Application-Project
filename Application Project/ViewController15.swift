@@ -53,22 +53,22 @@ class ViewController15: UIViewController,UITextFieldDelegate{
         showAlert2()
     }
     
-    func textField(_ textField: UITextField, willDismissEditMenuWith animator: UIEditMenuInteractionAnimating) {
-        if passwordTextField.text?.count ?? 0 != 6{
-            self.nextButton.isEnabled = true
-        }
-        else{
-            self.nextButton.isEnabled = false
-        }
-    }
-    
-    @IBAction func nextButtonAction(_ sender: UIButton) {
-//        if passwordTextField.text?.count ?? 0 != 6{
-//            showAlert()
+//    func textFieldDidChangeSelection(_ textField: UITextField) {
+//        if (passwordTextField.text?.count)! >= 6{
+//            self.nextButton.isEnabled = true
 //        }
 //        else{
-//            navigation()
+//            self.nextButton.isEnabled = false
 //        }
-        navigation()
+//    }
+    
+    @IBAction func nextButtonAction(_ sender: UIButton) {
+        if passwordTextField.text?.count ?? 0 != 6{
+            showAlert()
+        }
+        else{
+            SqLite.addData(userName: "", password: passwordTextField.text!, number: 0, email: "")
+            navigation()
+        }
     }
 }

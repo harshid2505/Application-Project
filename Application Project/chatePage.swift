@@ -54,9 +54,14 @@ class chatePage: UIViewController,UITableViewDelegate,UITableViewDataSource{
         navigate.name2 = name2
         navigationController?.pushViewController(navigate, animated: true)
     }
+    
+    func navigation1(){
+        let navigate = storyboard?.instantiateViewController(withIdentifier: "HomePage") as! HomePage
+        navigationController?.pushViewController(navigate, animated: true)
+    }
 
     @IBAction func backButtonAction(_ sender: UIButton) {
-        
+        navigation1()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

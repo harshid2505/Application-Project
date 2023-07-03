@@ -13,5 +13,7 @@ class myCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var myView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
+    
    
+    
 }

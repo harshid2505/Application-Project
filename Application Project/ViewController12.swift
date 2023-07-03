@@ -14,6 +14,7 @@ class ViewController12: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        SqLite.createFile()
     }
     
 //    func navigation(){
@@ -67,12 +68,22 @@ class ViewController12: UIViewController {
     }
     
     @IBAction func nextButtonAction(_ sender: UIButton) {
+//        if emailTextField.text == ""{
+//            showAlert()
+//        }
+//        else{
+//            savealert()
+//        }
+//        let email = isValidEmail(testStr: emailTextField.text!)
         if emailTextField.text == ""{
             showAlert()
+//            emailTextField.text = ""
         }
         else{
+            SqLite.addData(userName: "", password: "", number: 0, email: emailTextField.text!)
             savealert()
         }
+        
     }
     
     @IBAction func signUpButtonAction(_ sender: UIButton) {

@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var showButton: UIButton!
     
     @IBOutlet weak var loginButton: UIButton!
     
@@ -21,10 +22,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        showButton.addTarget(self, action: #selector(togglePasswordVisibility), for: .touchUpInside)
+        
         cornerRedius()
+        
+        SqLite.createFile()
     }
     
-   
+    @objc func togglePasswordVisibility(){
+        passwordTextField.isSecureTextEntry.toggle()
+        
+        if passwordTextField.isSecureTextEntry{
+            showButton.setImage(UIImage(named: "close eye"), for: .normal)
+        }
+        else{
+            showButton.setImage(UIImage(named: "eye"), for: .normal)
+        }
+    }
     
     func cornerRedius(){
         loginButton.layer.cornerRadius = 5
@@ -59,27 +73,32 @@ class ViewController: UIViewController {
     }
 
     @IBAction func loginButtonAction(_ sender: Any) {
-        
+
         if userNameTextField.text == "" && passwordTextField.text == ""{
             showAlert(title: "Error", message: "Plese Enter Your Username & Password.")
         }
-        
+
         else if userNameTextField.text == ""{
             showAlert(title:"Error",message: "Plese Enter Your Username.")
         }
-        
-        
-        
+
+
+
         else if passwordTextField.text == ""{
             showAlert( title:"Erorr",message: "Plese Enter Your Password.")
         }
-        
-        if userNameTextField.text == "harshid" && passwordTextField.text == "2505"{
+
+        if userNameTextField.text == "harshid" && passwordTextField.text == "2505" {
             navigation()
         }
         else{
             showAlert(title: "Incorrect Password",message: "The password you entered is incorrect. Plese try again." )
         }
+//        if SqLite.checkData(userName: userNameTextField.text ?? "", password: passwordTextField.text ?? ""){
+//            print("Login")
+//            navigation()
+//        }
+//
     }
     
     @IBAction func fordetPasswordButtonAction(_ sender: Any) {

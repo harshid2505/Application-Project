@@ -51,6 +51,9 @@ class HomePage: UIViewController,UITableViewDelegate,UITableViewDataSource {
             cell.dpImage.layer.cornerRadius = cell.dpImage.frame.width/2
             cell.nameLabel.text = name[indexPath.row]
             cell.blueTickImage.image = blueTick[indexPath.row]
+            
+            cell.object = navigation1
+            
             if selectCell == indexPath.row{
                 cell.likeButtonn.setImage(UIImage(named: "likeFillButton"), for: .normal)
                 cell.a = 0
@@ -84,12 +87,22 @@ class HomePage: UIViewController,UITableViewDelegate,UITableViewDataSource {
         navigationController?.pushViewController(navigate, animated: true)
     }
     
+    func navigation1(a:IndexPath){
+        let navigate = storyboard?.instantiateViewController(withIdentifier: "sharePage") as! sharePage
+       present(navigate, animated: true)
+    }
     
-    @IBAction func chateButtonAction(_ sender: UIButton) {
+//    @IBAction func chatButtonAction(_ sender: UIBarButtonItem) {
+//        navigation()
+//    }
+    
+    
+    @IBAction func chatButtonAction(_ sender: UIButton) {
         navigation()
     }
     
-    @IBAction func likePageButton(_ sender: UIButton) {
+    @IBAction func likeButtonAction(_ sender: UIBarButtonItem) {
+        
     }
     
 }

@@ -69,6 +69,9 @@ class ViewController10: UIViewController {
             showAlert()
         }
         else{
+            if let x = mobileNumberTextField.text,let y = Int(x){
+                SqLite.addData(userName: "", password: "", number: y, email: "")
+            }
             navigation()
         }
     }
